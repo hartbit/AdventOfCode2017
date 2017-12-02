@@ -8,7 +8,9 @@ let package = Package(
         .executable(name: "puzzle-1-2", targets: ["Puzzle_1_2"]),
     ],
     targets: [
-        .target(name: "Puzzle_1_1", dependencies: []),
-        .target(name: "Puzzle_1_2", dependencies: []),
+        .target(name: "Puzzle_1_1", dependencies: ["Logic"]),
+        .target(name: "Puzzle_1_2", dependencies: ["Logic"]),
+        .target(name: "Logic", dependencies: []),
+        .testTarget(name: "LogicTests", dependencies: ["Logic"])
     ]
 )
