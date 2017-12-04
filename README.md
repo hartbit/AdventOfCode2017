@@ -1,3 +1,3 @@
-# 1
+# Advent of Code 2017
 
-A description of this package.
+This is my code solutions for Advent of Code 2017 in Swift.
