@@ -1,5 +1,5 @@
 import XCTest
-import Logic
+@testable import Logic
 
 class SpreadsheetTests: XCTestCase {
 	func testPuzzle1() {
