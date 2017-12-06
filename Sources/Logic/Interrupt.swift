@@ -6,6 +6,7 @@ public class Interrupt {
 
     private(set) var jumps: [Int]
     private(set) var programCounter: Int = 0
+    public private(set) var numberOfCycles: Int = 0
     let style: Style
     
     var hasReachedExit: Bool {
@@ -28,15 +29,12 @@ public class Interrupt {
         }
         
         programCounter += jump
+        numberOfCycles += 1
     }
 
-    public func run() -> Int {
-        var cycles = 0
+    public func runUntilExit() {
         while !hasReachedExit {
             step()
-            cycles += 1
         }
-
-        return cycles
     }
 }
