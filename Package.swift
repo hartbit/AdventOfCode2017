@@ -10,9 +10,11 @@ let package = Package(
         .executable(name: "puzzle4", targets: ["Puzzle4"]),
         .executable(name: "puzzle5", targets: ["Puzzle5"]),
         .executable(name: "puzzle6", targets: ["Puzzle6"]),
+        .executable(name: "puzzle7", targets: ["Puzzle7"]),
     ],
     dependencies: [
-        .package(url: "https://github.com/kylef/Commander.git", from: "0.8.0")
+        .package(url: "https://github.com/kylef/Commander.git", from: "0.8.0"),
+        .package(url: "https://github.com/sharplet/Regex.git", from: "1.1.0"),
     ],
     targets: [
         .target(name: "Puzzle1", dependencies: ["Commander", "Logic"]),
@@ -21,7 +23,8 @@ let package = Package(
         .target(name: "Puzzle4", dependencies: ["Commander", "Logic"]),
         .target(name: "Puzzle5", dependencies: ["Commander", "Logic"]),
         .target(name: "Puzzle6", dependencies: ["Commander", "Logic"]),
-        .target(name: "Logic", dependencies: ["Commander"]),
+        .target(name: "Puzzle7", dependencies: ["Commander", "Logic"]),
+        .target(name: "Logic", dependencies: ["Commander", "Regex"]),
         .testTarget(name: "LogicTests", dependencies: ["Logic"])
     ]
 )

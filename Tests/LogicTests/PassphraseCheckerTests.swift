@@ -18,10 +18,8 @@ class PassphraseCheckerTests: XCTestCase {
         XCTAssertEqual(checker.isValidWithAnagrams("oiii ioii iioi iiio"), false)
 	}
 
-	static var allTests = {
-        return [
-            ("testPuzzle1", testPuzzle1),
-            ("testPuzzle2", testPuzzle2),
-        ]
-    }()
+	static let allTests = [
+        ("testPuzzle1", testPuzzle1),
+        ("testPuzzle2", testPuzzle2),
+    ]
 }

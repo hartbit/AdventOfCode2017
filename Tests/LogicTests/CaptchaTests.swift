@@ -19,10 +19,8 @@ class CaptchaTests: XCTestCase {
 		XCTAssertEqual(captcha.sum(of: "12131415", offset: 4), 4)
 	}
 
-	static var allTests = {
-        return [
-            ("testPuzzle1", testPuzzle1),
-            ("testPuzzle2", testPuzzle2),
-        ]
-    }()
+	static let allTests = [
+        ("testPuzzle1", testPuzzle1),
+        ("testPuzzle2", testPuzzle2),
+    ]
 }

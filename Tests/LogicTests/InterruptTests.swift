@@ -30,12 +30,10 @@ class InterruptTests: XCTestCase {
         XCTAssertEqual(interrupt.debugDescription, "2 3 2 3 -1")
 	}
 
-	static var allTests = {
-        return [
-            ("testPuzzle1", testPuzzle1),
-            ("testPuzzle2", testPuzzle2),
-        ]
-    }()
+	static let allTests = [
+        ("testPuzzle1", testPuzzle1),
+        ("testPuzzle2", testPuzzle2),
+    ]
 }
 
 extension Interrupt: CustomDebugStringConvertible {
