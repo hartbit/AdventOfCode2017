@@ -1,6 +1,6 @@
 import Regex
 
-let regex = Regex("\\A(\\w+) \\((\\d+)\\)(?: -> (\\w+(?:,\\s\\w+)*))?\\z")
+private let regex = Regex("\\A(\\w+) \\((\\d+)\\)(?: -> (\\w+(?:,\\s\\w+)*))?\\z")
 
 public class ProgramTree {
     public let name: String
