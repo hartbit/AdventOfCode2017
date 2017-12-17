@@ -17,7 +17,7 @@ let main = command(
             .forEach({ hasher.reverse(by: $0) })
         print(Int(hasher.data[0]) * Int(hasher.data[1]))
 	case .two:
-        print(KnotHasher.hash(input))
+        print(KnotHasher.hash(input).hexEncodedString())
 	}
 }
 

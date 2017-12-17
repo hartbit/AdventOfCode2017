@@ -23,7 +23,7 @@ public class KnotHasher {
 		skipSize += 1
 	}
 	
-	public static func hash(_ input: String) -> String {
+	public static func hash(_ input: String) -> Data {
 		var lengths = input.data(using: .utf8)!
 		lengths.append(Data([17, 31, 73, 47, 23]))
 
@@ -40,12 +40,12 @@ public class KnotHasher {
 			hash.append(sum)
 		}
 
-		return hash.hexEncodedString()
+		return hash
 	}
 }
 
 extension Data {
-	func hexEncodedString() -> String {
+	public func hexEncodedString() -> String {
 		var hex = ""
 		for byte in self {
 			hex += String(format: "%02x", byte)

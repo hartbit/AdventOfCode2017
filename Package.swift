@@ -17,6 +17,7 @@ let package = Package(
         .executable(name: "puzzle11", targets: ["Puzzle11"]),
         .executable(name: "puzzle12", targets: ["Puzzle12"]),
         .executable(name: "puzzle13", targets: ["Puzzle13"]),
+        .executable(name: "puzzle14", targets: ["Puzzle14"]),
     ],
     dependencies: [
         .package(url: "https://github.com/kylef/Commander.git", from: "0.8.0"),
@@ -36,6 +37,7 @@ let package = Package(
         .target(name: "Puzzle11", dependencies: ["Commander", "Logic"]),
         .target(name: "Puzzle12", dependencies: ["Commander", "Logic"]),
         .target(name: "Puzzle13", dependencies: ["Commander", "Logic"]),
+        .target(name: "Puzzle14", dependencies: ["Commander", "Logic"]),
         .target(name: "Logic", dependencies: ["Commander", "Regex"]),
         .testTarget(name: "LogicTests", dependencies: ["Logic"])
     ]
