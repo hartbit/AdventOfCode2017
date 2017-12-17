@@ -17,6 +17,5 @@ class HexGridTests: XCTestCase {
 
 	static let allTests = [
         ("testPuzzle1", testPuzzle1),
-        ("testPuzzle2", testPuzzle2),
     ]
 }
